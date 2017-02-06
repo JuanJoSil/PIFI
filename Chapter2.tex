@@ -5,35 +5,53 @@
 %\addcontentsline{toc}{chapter}{\ Thorough Derivation of the Rabi Equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{equation} 
-\nabla \cdot E = 0,  \\ 
-\nabla \times = - d_{t} B, \\
-\end{equation}
-\begin{equation}
-\nabla \cdot B = 0, \\
-\nabla \times B=  \frac{_{t} E}{v^2},  \\
-\end{equation}
-\begin{equation}
-\hat{E_{0}} = E_{x}\hat{x} + E_{y}\hat{y}+E_{z}\hat{z}
-\end{equation}
-\begin{equation}
+\begin{subequations}\label{Maxwell}
+	\begin{align}
+	\nabla \cdot E = 0,\label{Primera}\\
+	\nabla \times = - d_{t} B,\label{segunda}\\
+	\nabla \cdot B = 0,\label{tercera}\\
+	\nabla \times B=  \frac{_{t} E}{v^2},\label{cuarta}
+	\end{align}
+\end{subequations}
+\begin{subequations}\label{Camposincidentes}
+	\begin{align}
+\hat{E_{0}} = E_{x}\hat{x} + E_{y}\hat{y}+E_{z}\hat{z} \\
 \hat{B_{0}} = B_{x}\hat{x} + B_{y}\hat{y}+B_{z}\hat{z}
-\end{equation}
-\begin{equation}
-d_{y}E_{x}-d_{x}E_{y}= i w B_{z}
-\end{equation}
-\begin{equation}
-i k E_{x}-d_{x}E_{z}= i w B_{y}
-\end{equation}
-\begin{equation}
-d_{y}E_{z}-i k E_{y}= i w B_{x}
-\end{equation}
-\begin{equation}
-d_{x}B_{z}-d_{y}B_{x}= \frac{-iw E_{Z} }{v^2} 
-\end{equation}
-\begin{equation}
-i k B_{x}-d_{x}B_{z}= \frac{-iw E_{y} }{v^2} 
-\end{equation}
-\begin{equation}
+	\end{align}
+\end{subequations}
+\begin{subequations}\label{Camposexplicitos}
+	\begin{align}
+d_{y}E_{x}-d_{x}E_{y}= i w B_{z} \\
+i k E_{x}-d_{x}E_{z}= i w B_{y} \\
+d_{y}E_{z}-i k E_{y}= i w B_{x} \\
+d_{x}B_{z}-d_{y}B_{x}= \frac{-iw E_{Z} }{v^2} \\
+i k B_{x}-d_{x}B_{z}= \frac{-iw E_{y} }{v^2} \\
 d_{y}B_{z}- i k B_{y}= \frac{-iw E_{x} }{v^2} 
-\end{equation}
+	\end{align}
+\end{subequations}
+%Parte 3 waveguide fisico
+Operando entre ellas se puede llegar ha
+\begin{subequations}\label{Ecuacionesdecampo}
+	\begin{align}
+	E_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{x}E_{z}+w d_{y} B_{z}) \\
+	E_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{y}E_{z}-w d_{x} B_{z}) \\
+	B_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{x}B_{z}- \frac{w}{v^2} d_{y} E_{z}) \\
+	B_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{y}B_{z}- \frac{w}{v^2} d_{x} E_{z}) 
+	\end{align}
+\end{subequations}
+De este procedimiento se obtienen  
+\begin{subequations}\label{Helmholtz}
+	\begin{align}
+[d_{x}^2+d_{y}^2+(\frac{w}{v})^2-k^2] E_{z}=0\\
+[d_{x}^2+d_{y}^2+(\frac{w}{v})^2-k^2] B_{z}=0
+	\end{align}
+\end{subequations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas ah
+\begin{subequations}
+	\begin{align}
+	B_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (d_{z} B{z})+i\mu\epsilon\frac{w}{v}e_{3}\wedge D_{t}E_{z} \\
+	E_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (d_{z} E{z})-i\frac{w}{v}e_{3}\wedge D_{t}B_{z} 
+	\end{align}
+	\end{subequations}
+Donde $t$ es la componente transversal
