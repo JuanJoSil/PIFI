@@ -9,119 +9,121 @@
 \begin{subequations}\label{Maxwell}
 	\begin{align}
 	\nabla \cdot E = 0,\label{Primera}\\
-	\nabla \times = - d_{t} B,\label{segunda}\\
+	\nabla \times = - \partial_{t} B,\label{segunda}\\
 	\nabla \cdot B = 0,\label{tercera}\\
-	\nabla \times B=  \frac{_{t} E}{v^2},\label{cuarta}
+	\nabla \times B=  \frac{1}{v^2} \partial_{t} E,\label{cuarta}
 	\end{align}
 \end{subequations}
 \begin{subequations}\label{Camposincidentes}
 	\begin{align}
-\hat{E_{0}} = E_{x}\hat{x} + E_{y}\hat{y}+E_{z}\hat{z} \\
-\hat{B_{0}} = B_{x}\hat{x} + B_{y}\hat{y}+B_{z}\hat{z}
+	\hat{E_{0}} = E_{x}\hat{x} + E_{y}\hat{y}+E_{z}\hat{z} \\
+	\hat{B_{0}} = B_{x}\hat{x} + B_{y}\hat{y}+B_{z}\hat{z}
 	\end{align}
 \end{subequations}
 \begin{subequations}\label{Camposexplicitos}
 	\begin{align}
-d_{y}E_{x}-d_{x}E_{y}= i w B_{z} \\
-i k E_{x}-d_{x}E_{z}= i w B_{y} \\
-d_{y}E_{z}-i k E_{y}= i w B_{x} \\
-d_{x}B_{z}-d_{y}B_{x}= \frac{-iw E_{Z} }{v^2} \\
-i k B_{x}-d_{x}B_{z}= \frac{-iw E_{y} }{v^2} \\
-d_{y}B_{z}- i k B_{y}= \frac{-iw E_{x} }{v^2} 
+	\partial_{y}E_{x}-\partial_{x}E_{y}= i w B_{z} \\
+	i k E_{x}-\partial_{x}E_{z}= i w B_{y} \\
+	\partial_{y}E_{z}-i k E_{y}= i w B_{x} \\
+	\partial_{x}B_{z}-\partial_{y}B_{x}= \frac{-iw E_{Z} }{v^2} \\
+	i k B_{x}-\partial_{x}B_{z}= \frac{-iw E_{y} }{v^2} \\
+	\partial_{y}B_{z}- i k B_{y}= \frac{-iw E_{x} }{v^2} 
 	\end{align}
 \end{subequations}
 %Parte 3 waveguide fisico
 Operando entre ellas se puede llegar ha
 \begin{subequations}\label{Ecuacionesdecampo}
 	\begin{align}
-	E_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{x}E_{z}+w d_{y} B_{z}) \\
-	E_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{y}E_{z}-w d_{x} B_{z}) \\
-	B_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{x}B_{z}- \frac{w}{v^2} d_{y} E_{z}) \\
-	B_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k d_{y}B_{z}- \frac{w}{v^2} d_{x} E_{z}) 
+	E_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}E_{z}+w \partial_{y} B_{z}) \\
+	E_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}E_{z}-w \partial_{x} B_{z}) \\
+	B_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}B_{z}- \frac{w}{v^2} \partial_{y} E_{z}) \\
+	B_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}B_{z}- \frac{w}{v^2} \partial_{x} E_{z}) 
 	\end{align}
 \end{subequations}
 De este procedimiento se obtienen  
 \begin{subequations}\label{Helmholtz}
 	\begin{align}
-[d_{x}^2+d_{y}^2+(\frac{w}{v})^2-k^2] E_{z}=0\\
-[d_{x}^2+d_{y}^2+(\frac{w}{v})^2-k^2] B_{z}=0
+	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] E_{z}=0\\
+	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] B_{z}=0
 	\end{align}
 \end{subequations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Guías en fibras metálicas}
-\begin{subequations}
-	\begin{align} \label{mawxellmetalicas}
-	\nabla \cdot E= 0 , \nabla \times E = d_{t}B\\
-	\nabla \cdot B=0, \nabla \times B = \mu \epsilon E + \mu \sigma E  
-	\end{align}
-	\end{subequations}
+\begin{subequations} \label{mawxellmetalicas}
+	\begin{eqnarray}
+	\nabla \cdot \mathbf{E} &=& 0 ,\\
+	\nabla \times E &=& \partial_{t}B, \\
+	\nabla \cdot B &=& 0, \\ 
+	\nabla \times B &=& \mu \epsilon E + \mu \sigma E  
+	\end{eqnarray}
+\end{subequations}
 Operando el rotaciones en la ultima ecuacion y usando la identidad del triple producto vectorial obtenemos
 \begin{subequations}\label{potencialmetalico}
-\begin{align}
-	\nabla^2 E=\mu \epsilon d_{t}^2E+\mu\sigma d_{t} E \\
-	\nabla^2 B=\mu \epsilon d_{t}^2B+\mu\sigma d_{t} B 
-\end{align}
+	\begin{align}
+	\nabla^2 E=\mu \epsilon \partial_{t}^2E+\mu\sigma \partial_{t} E \\
+	\nabla^2 B=\mu \epsilon \partial_{t}^2B+\mu\sigma \partial_{t} B 
+	\end{align}
 \end{subequations}
 Utilizando la formulación imaginaria de los campos
-\begin{equation}
-	\widehat{E}(z,t)=\widehat{E}_{0} e^{\hat{k}z-wt} ; \widehat{B}(z,t)=\widehat{B}_{0} e^{\hat{k}z-wt} 
-\end{equation}
+\begin{eqnarray}
+\mathbf{E}(\vec{r},t) &=& E_{0}(\vec{r}_{\perp}) e^{\hat{k}z-wt} ; \\
+\mathbf{B}(\vec{r},t) &=& B_{0}(\vec{r}_{\perp}) e^{\hat{k}z-wt} 
+\end{eqnarray}
 Operando con ellas y usando las ecuaciones~\ref{potencialmetalico}, obtenemos una ecuacion para
 el numero de onda
 \begin{equation}
-\widehat{k}^2=\mu \epsilon w^2 + i \mu \sigma w
+k^2=\mu \epsilon w^2 + i \mu \sigma w, \qquad k \in \mathbb{C}, \quad \mu, \epsilon, \sigma \in \mathbb{R}
 \end{equation}
 Quitando las dependecia de la frecuencia $w$ 
 \begin{subequations}
-	\begin{gather}
-	(k+i\kappa)^2=k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \nonumber \\
-	k^2 - \kappa^2 = \mu \epsilon w^2 ; 2 k \kappa = \mu \sigma w \nonumber \\
-	\text{por lo que } \kappa=\frac{\mu \epsilon w}{2 k}\nonumber \\
-\text{Metiendo las equivalencias obtenidas a las ecuaciones originales } \\ 
+	\begin{eqnarray}
+	(k+i\kappa)^2 &=& k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \nonumber \\
+	k^2 - \kappa^2 &=& \mu \epsilon w^2, \\ 
+	2 k \kappa &=& \mu \sigma w \nonumber \\
+	\end{eqnarray}
+\end{subequations}
+por lo que 
+\begin{eqnarray}
+\kappa &=& \frac{\mu \epsilon w}{2 k}
+\end{eqnarray}
+
+
+Metiendo las equivalencias obtenidas a las ecuaciones originales 
+\begin{subequations}
+	\begin{eqnarray}
 	k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \nonumber\\
-	\text{Completando cuadrados llegamos a } \nonumber \\
-	 k= w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}+1]^\frac{1}{2} \\
-	 \text{como } \kappa^2 = k^2 - \mu \epsilon w^2 \text{luego} \nonumber\\
-	 \kappa = w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}-1]^\frac{1}{2}
-	\end{gather}
+	\end{eqnarray}
+\end{subequations}
+Completando cuadrados llegamos a 
+\begin{subequations}
+	\begin{eqnarray}
+	k= w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1+\left(\frac{\sigma}{\epsilon w} \right)^2}+1 \right]^\frac{1}{2}
+	\end{eqnarray}
+\end{subequations}
+como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
+\begin{subequations}
+	\begin{eqnarray}
+	\kappa = w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1 + \left(\frac{\sigma}{\epsilon w} \right)^2}-1\right]^\frac{1}{2}
+	\end{eqnarray}
 \end{subequations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías cuadradas}
 \begin{subequations}
 	\begin{align}
-		B_{z}(x,y)=X(x)Y(y) \nonumber \\
-		Y d_{x}^2+X d_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
-		\frac{}{x} dx_{x}^2=-k_{x}^2 ; \frac{}{Y}d_{y}^2 Y = -K_{y}^2 \nonumber \\
-		-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber\\
-		\text{Proponiendo } \nonumber \\
-		X(x)=A sin (K_{x} x) + B cos(k_{x}x)  \\
-		\text{metendielo en las ecuaciones originales} \nonumber \\
-		B_{z}=B_{0} cos(m \pi \frac{x}{a}) cos(n \pi \frac{y}{a}) \\
-		k = \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
+	B_{z}(x,y)=X(x)Y(y) \nonumber \\
+	Y d_{x}^2 X+X d_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
+	\frac{1}{X} d_{x}^2 X=-k_{x}^2 ; \frac{1}{Y}d_{y}^2 Y = -K_{y}^2 \nonumber \\
+	-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber\\
+	\text{Proponiendo } \nonumber \\
+	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  \\
+	\text{metendielo en las ecuaciones originales} \nonumber \\
+	B_{z}=B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
+	k = \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
 	\end{align}
 \end{subequations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}
-\begin{subequations}
-	\begin{align}
-	\gamma^2 =  \mu_{1} \epsilon_{1} \frac{w^2}{v^2} - k^2   && \text{  Dentro}\\
-	\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}   && \text{ Fuera (onda desvaneciente)}
-		\end{align}
-	\end{subequations}
-La ecuacion de Helmholtz para variación azimutal toma la forma
-\begin{subequations}
-	\begin{align}
-		(d_{\rho}^2+\rho^{-1} d_{\rho}+\gamma^2) \psi = 0\\
-			(d_{\rho}^2+\rho^{-1} d_{\rho}-\beta^2) \psi = 0
-	\end{align}
-\end{subequations}
-Que es la ecuación diferencial de Bessel y cuya solución toma la forma
-\begin{equation} \label{Soluciones metalico bessel}
-\begin{split}
-	\psi  & = \bigg \{ J_{0} (\gamma \rho), \rho \leq a\\
-          &   A k_{0} (\beta \rho), \rho > a
-\end{split}
-\end{equation}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Guías dieléctricas}
 Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas a
@@ -147,7 +149,7 @@ E_{\phi} = \frac{-w}{v k }B_{\rho} ; E_{\rho} = \frac{v k}{\epsilon w} B_{\phi}
 Con soluciones 
 \begin{subequations}
 	\begin{gather}
-		B_{z} = J_{0}(\gamma \rho) && para \rho \leq a \nonumber \\
+		B_{z} = J_{0}(\gamma \rho) para \rho \leq a \nonumber \\
 		B_{\rho } = \frac{-i k}{\gamma} J_{1} (\gamma \rho) \nonumber \\
 		E_{\phi} =
 	\end{gather}
@@ -156,5 +158,25 @@ Con soluciones
 \subsubsection{Guías cuadradas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}
+\begin{subequations}
+	\begin{align}
+	\gamma^2 =  \mu_{1} \epsilon_{1} \frac{w^2}{v^2} - k^2   && \text{  Dentro}\\
+	\textcolor{red}{\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}}   && \text{ Fuera (onda desvaneciente)}
+	\end{align}
+\end{subequations}
+La ecuacion de Helmholtz para variación azimutal toma la forma
+\begin{subequations}
+	\begin{align}
+	(d_{\rho}^2+\rho^{-1} d_{\rho}+\gamma^2) \psi = 0\\
+	(d_{\rho}^2+\rho^{-1} d_{\rho}-\beta^2) \psi = 0
+	\end{align}
+\end{subequations}
+Que es la ecuación diferencial de Bessel y cuya solución toma la forma
+\begin{equation} \label{Soluciones metalico bessel}
+\begin{split}
+\psi  & = \bigg \{ J_{0} (\gamma \rho), \rho \leq a\\
+&   A k_{0} (\beta \rho), \rho > a
+\end{split}
+\end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acoplamientos}
