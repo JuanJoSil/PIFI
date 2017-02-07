@@ -5,6 +5,7 @@
 %\addcontentsline{toc}{chapter}{\ Thorough Derivation of the Rabi Equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Helm}
 \begin{subequations}\label{Maxwell}
 	\begin{align}
 	\nabla \cdot E = 0,\label{Primera}\\
@@ -47,7 +48,43 @@ De este procedimiento se obtienen
 	\end{align}
 \end{subequations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas ah
+\subsection{Guías en fibras metálicas}
+\begin{subequations}
+	\begin{align} \label{mawxellmetalicas}
+	\nabla \cdot E= 0 , \nabla \times E = d_{t}B\\
+	\nabla \cdot B=0, \nabla \times B = \mu \epsilon E + \mu \sigma E  
+	\end{align}
+	\end{subequations}
+Operando el rotaciones en la ultima ecuacion y usando la identidad del triple producto vectorial obtenemos
+\begin{subequations}\label{potencialmetalico}
+\begin{align}
+	\nabla^2 E=\mu \epsilon d_{t}^2E+\mu\sigma d_{t} E \\
+	\nabla^2 B=\mu \epsilon d_{t}^2B+\mu\sigma d_{t} B 
+\end{align}
+\end{subequations}
+Utilizando la formulación imaginaria de los campos
+\begin{equation}
+	\widehat{E}(z,t)=\widehat{E}_{0} e^{\hat{k}z-wt} ; \widehat{B}(z,t)=\widehat{B}_{0} e^{\hat{k}z-wt} 
+\end{equation}
+Operando con ellas y usando las ecuaciones~\ref{potencialmetalico}, obtenemos una ecuacion para
+el numero de onda
+\begin{equation}
+\widehat{k}^2=\mu \epsilon w^2 + i \mu \sigma w
+\end{equation}
+Quitando las dependecia de la frecuencia $w$ 
+\begin{subequations}
+	\begin{align}
+	(k+i\kappa)^2=k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \\
+	k^2 - \kappa^2 = \mu \epsilon w^2 ; 2 k \kappa = \mu \sigma w \\
+	\text{por lo que } \kappa=\frac{\mu \epsilon w}{2 k}\\
+	\text{Metiendo las equivalencias obtenidas a las ecuaciones originales } k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \\
+	\text{Completando cuadrados llegamos a } \\
+	 k= w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}+1]^\frac{1}{2}
+	\end{align}
+\end{subequations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Guías dieléctricas}
+Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas a
 \begin{subequations}
 	\begin{align}
 	B_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (d_{z} B{z})+i\mu\epsilon\frac{w}{v}e_{3}\wedge D_{t}E_{z} \\
