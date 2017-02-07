@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  6 FEB 2017 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  6 FEB 2017 22:48
 entering extended mode
 **./Master.tex
 (Master.tex
@@ -2581,33 +2581,18 @@ l.63 \end{align}
 me{equation.1.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.2}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.3}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.82 	\end{align}
-                 
-Overfull \hbox (190.50993pt too wide) in paragraph at lines 82--82
-[] 
- []
-
-
+l.86 	\end{gather}
+                  
 Underfull \vbox (badness 2600) has occurred while \output is active []
 
 
@@ -2622,42 +2607,57 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.1}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.2}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.3}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.4}) has been already used, duplicate ignored
+l.86 	\end{gather}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 	\end{align}
-                 ]pdfTeX warning (ext4): destination with the same identifier (
+l.86 	\end{gather}
+                  ]pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.1.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.101 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.101 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.101 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
 name{equation.1.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.91 	\end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{equation.1.0.2}) has been already used, duplicate ignored
+l.110 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.91 	\end{align}
-                 )
+l.110 	\end{align}
+                  )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2773,8 +2773,8 @@ Package rerunfilecheck Info: File `Master.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 28732 strings out of 493333
- 529461 string characters out of 3139181
+ 28734 strings out of 493333
+ 529486 string characters out of 3139181
  633733 words of memory out of 3000000
  31659 multiletter control sequences out of 15000+200000
  11270 words of font info for 46 fonts, out of 3000000 for 9000
@@ -2789,9 +2789,9 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Master.pdf (27 pages, 383459 bytes).
+Output written on Master.pdf (27 pages, 387298 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
  8818 words of extra memory for PDF output out of 10000 (max. 10000000)
 

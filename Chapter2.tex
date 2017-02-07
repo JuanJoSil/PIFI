@@ -73,15 +73,36 @@ el numero de onda
 \end{equation}
 Quitando las dependecia de la frecuencia $w$ 
 \begin{subequations}
+	\begin{gather}
+	(k+i\kappa)^2=k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \nonumber \\
+	k^2 - \kappa^2 = \mu \epsilon w^2 ; 2 k \kappa = \mu \sigma w \nonumber \\
+	\text{por lo que } \kappa=\frac{\mu \epsilon w}{2 k}\nonumber \\
+\text{Metiendo las equivalencias obtenidas a las ecuaciones originales } \\ 
+	k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \nonumber\\
+	\text{Completando cuadrados llegamos a } \nonumber \\
+	 k= w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}+1]^\frac{1}{2} \\
+	 \text{como } \kappa^2 = k^2 - \mu \epsilon w^2 \text{luego} \nonumber\\
+	 \kappa = w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}-1]^\frac{1}{2}
+	\end{gather}
+\end{subequations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Guía cuadrada}
+\begin{subequations}
 	\begin{align}
-	(k+i\kappa)^2=k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \\
-	k^2 - \kappa^2 = \mu \epsilon w^2 ; 2 k \kappa = \mu \sigma w \\
-	\text{por lo que } \kappa=\frac{\mu \epsilon w}{2 k}\\
-	\text{Metiendo las equivalencias obtenidas a las ecuaciones originales } k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \\
-	\text{Completando cuadrados llegamos a } \\
-	 k= w \sqrt{\frac{\epsilon \ mu}{2}} [\sqrt{1+(\frac{\sigma}{\epsilon w})^2}+1]^\frac{1}{2}
+		B_{z}(x,y)=X(x)Y(y) \nonumber \\
+		Y d_{x}^2+X d_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
+		\frac{}{x} dx_{x}^2=-k_{x}^2 ; \frac{}{Y}d_{y}^2 Y = -K_{y}^2 \nonumber \\
+		-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber\\
+		\text{Proponiendo } \nonumber \\
+		X(x)=A sin (K_{x} x) + B cos(k_{x}x)  \\
+		\text{metendielo en las ecuaciones originales} \nonumber \\
+		B_{z}=B_{0} cos(m \pi \frac{x}{a}) cos(n \pi \frac{y}{a}) \\
+		k = \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
 	\end{align}
 \end{subequations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Guías esféricas}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Guías dieléctricas}
 Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas a
