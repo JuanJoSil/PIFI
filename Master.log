@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  6 FEB 2017 22:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  7 FEB 2017 00:00
 entering extended mode
 **./Master.tex
 (Master.tex
@@ -2651,12 +2651,44 @@ l.101 	\end{align}
 name{equation.1.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 	\end{align}
+l.109 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.1.0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.1.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 	\end{align}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{equation.1.0.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 	\end{align}
+l.116 	\end{align}
+                  
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]pdfTeX warning (ext4): destination with the same identifier (name{equation.1
+.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.132 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.132 	\end{align}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.1.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.138 	\end{align}
                   )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2664,21 +2696,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]
+[8]
 \openout2 = `Chapter3.aux'.
 
  (Chapter3.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8
-
-
-
-]
 Chapter 2.
 )
 
@@ -2687,7 +2708,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[9
+
+
+
+]
 \openout2 = `Chapter4.aux'.
 
  (Chapter4.tex
@@ -2773,13 +2798,13 @@ Package rerunfilecheck Info: File `Master.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 28734 strings out of 493333
- 529486 string characters out of 3139181
- 633733 words of memory out of 3000000
- 31659 multiletter control sequences out of 15000+200000
+ 28740 strings out of 493333
+ 529584 string characters out of 3139181
+ 633776 words of memory out of 3000000
+ 31660 multiletter control sequences out of 15000+200000
  11270 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,56p,10430b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,19n,56p,10430b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
@@ -2789,9 +2814,9 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Master.pdf (27 pages, 387298 bytes).
+Output written on Master.pdf (27 pages, 392130 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
  8818 words of extra memory for PDF output out of 10000 (max. 10000000)
 
