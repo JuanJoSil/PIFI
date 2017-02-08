@@ -111,8 +111,8 @@ como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
 \begin{subequations}
 	\begin{align}
 	B_{z}(x,y)=X(x)Y(y) \nonumber \\
-	Y d_{x}^2 X+X d_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
-	\frac{1}{X} d_{x}^2 X=-k_{x}^2 ; \frac{1}{Y}d_{y}^2 Y = -K_{y}^2 \nonumber \\
+	Y \partial_{x}^2 X+X \partial_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
+	\frac{1}{X} \partial_{x}^2 X=-k_{x}^2 ; \frac{1}{Y}\partial_{y}^2 Y = -K_{y}^2 \nonumber \\
 	-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber\\
 	\text{Proponiendo } \nonumber \\
 	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  \\
@@ -129,31 +129,39 @@ como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
 Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas a
 \begin{subequations}
 	\begin{align}
-	B_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (d_{z} B{z})+i\mu\epsilon\frac{w}{v}e_{3}\wedge D_{t}E_{z} \\
-	E_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (d_{z} E{z})-i\frac{w}{v}e_{3}\wedge D_{t}B_{z} 
+	B_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} B{z})+i\mu\epsilon\frac{w}{v}e_{3}\times D_{t}E_{z} \\
+	E_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} E{z})-i\frac{w}{v}e_{3}\times D_{t}B_{z} 
 	\end{align}
 	\end{subequations}
 Donde $t$ es la componente transversal
 \begin{subequations}
 	\begin{align}
-	B_{t}=\frac{}{\gamma^2} [D_{t}(d_{z}B_{z})+i\mu \epsilon \frac{w}{v} e_{3}\wedge D_{t}E_{z}]
+	B_{t}=\frac{}{\gamma^2} [D_{t}(\partial_{z}B_{z})+i\mu \epsilon \frac{w}{v} e_{3}\wedge D_{t}E_{z}]
 	\end{align}
 \end{subequations}
 Desarrollando todas las componentes implicada
 \begin{subequations}
 	\begin{align}
-B_{rho} = \frac{ik}{\gamma^2}d_{rho}B_{z} ; B_{\phi} = \frac{i \epsilon w}{\gamma^2 v} d_{\rho} E_{z}\\
-E_{\phi} = \frac{-w}{v k }B_{\rho} ; E_{\rho} = \frac{v k}{\epsilon w} B_{\phi}
+B_{rho} = \frac{ik}{\gamma^2}\partial_{rho}B_{z} \qquad B_{\phi} = \frac{i \epsilon w}{\gamma^2 v} \partial_{\rho} E_{z}\\
+E_{\phi} = \frac{-w}{v k }B_{\rho} \qquad E_{\rho} = \frac{v k}{\epsilon w} B_{\phi}
 	\end{align}
 \end{subequations}
 Con soluciones 
-\begin{subequations}
-	\begin{gather}
-		B_{z} = J_{0}(\gamma \rho) para \rho \leq a \nonumber \\
+\begin{eqnarray}
+	\begin{array}{ll}
+		B_{z} = J_{0}(\gamma \rho) \qquad \nonumber \\
 		B_{\rho } = \frac{-i k}{\gamma} J_{1} (\gamma \rho) \nonumber \\
-		E_{\phi} =
-	\end{gather}
-\end{subequations}
+		E_{\phi} = \frac{i w}{v \gamma} J_{1} (\gamma \rho)
+		\end{array} \Bigg\} \qquad \text{para}  \qquad \rho \leq a 
+\end{eqnarray}
+\begin{eqnarray}
+\begin{array}{ll}
+B_{z} = A K_{0}(\beta \rho) \qquad \nonumber \\
+B_{\rho } = \frac{i k A}{\beta} K_{1} (\beta \rho) \nonumber \\
+E_{\phi} = \frac{-i w A}{v \beta} K_{1} (\beta \rho)
+\end{array} \Bigg\}\qquad \text{para}  \qquad \rho \geq a 
+\end{eqnarray}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías cuadradas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -161,22 +169,26 @@ Con soluciones
 \begin{subequations}
 	\begin{align}
 	\gamma^2 =  \mu_{1} \epsilon_{1} \frac{w^2}{v^2} - k^2   && \text{  Dentro}\\
-	\textcolor{red}{\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}}   && \text{ Fuera (onda desvaneciente)}
+	\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}   && \text{ Fuera (onda desvaneciente)}
 	\end{align}
 \end{subequations}
 La ecuacion de Helmholtz para variación azimutal toma la forma
 \begin{subequations}
 	\begin{align}
-	(d_{\rho}^2+\rho^{-1} d_{\rho}+\gamma^2) \psi = 0\\
-	(d_{\rho}^2+\rho^{-1} d_{\rho}-\beta^2) \psi = 0
+	(\partial_{\rho}^2+\rho^{-1} \partial_{\rho}+\gamma^2) \psi = 0\\
+	(\partial_{\rho}^2+\rho^{-1} \partial_{\rho}-\beta^2) \psi = 0
 	\end{align}
 \end{subequations}
 Que es la ecuación diferencial de Bessel y cuya solución toma la forma
-\begin{equation} \label{Soluciones metalico bessel}
-\begin{split}
-\psi  & = \bigg \{ J_{0} (\gamma \rho), \rho \leq a\\
-&   A k_{0} (\beta \rho), \rho > a
-\end{split}
-\end{equation}
+ \label{Soluciones metalico bessel}
+\begin{eqnarray}
+\psi   & =  \Bigg\{ 
+\begin{array}{ll}
+J_{0}(\gamma \rho), \rho \leq a \hfill \\ 
+ A k_{0} (\beta \rho), \rho > a 
+ \end{array}
+\end{eqnarray}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acoplamientos}

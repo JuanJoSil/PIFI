@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  7 FEB 2017 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.5)  7 FEB 2017 22:36
 entering extended mode
 **./Master.tex
 (Master.tex
@@ -2763,27 +2763,22 @@ l.147 	\end{align}
 name{equation.1.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 	\end{gather}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{equation.1.0.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.165 	\end{align}
+l.173 	\end{align}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{equation.1.0.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 	\end{align}
+l.173 	\end{align}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{equation.1.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.172 	\end{align}
+l.180 	\end{align}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{equation.1.0.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.172 	\end{align}
+l.180 	\end{align}
                   )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2791,7 +2786,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[8pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+0.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.79         \include{Chapter2}
+                               pdfTeX warning (ext4): destination with the same
+ identifier (name{equation.1.0.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.79         \include{Chapter2}
+                               ]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2907,13 +2914,13 @@ Package rerunfilecheck Info: File `Master.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 28778 strings out of 493333
- 530318 string characters out of 3139181
+ 28777 strings out of 493333
+ 530303 string characters out of 3139181
  632783 words of memory out of 3000000
  31676 multiletter control sequences out of 15000+200000
  12442 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,56p,10430b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,13n,56p,10430b,777s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Juan Jose\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbold\dp
 i600\bbold12.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pf
@@ -2925,9 +2932,9 @@ ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb>
-Output written on Master.pdf (29 pages, 399082 bytes).
+Output written on Master.pdf (29 pages, 400329 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  9850 words of extra memory for PDF output out of 10000 (max. 10000000)
 
