@@ -132,14 +132,14 @@ como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
 \subsubsection{Guías esféricas}
 Las ecuaciones de Helmholtz en coordenas cilindricas toman la forma
 \begin{eqnarray}
-	E_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \beta_{z} \partial_{\rho} E_{z}+ \frac{w \mu}{\rho}\partial_{\phi}B_{z} \right] \\
-		E_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{-\beta_{z}}{\rho} \partial_{\phi} E_{z}+ w \mu\partial_{\rho}B_{z} \right] \\
-B_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{w \epsilon}{\rho} \partial_{\phi} E_{z}- \beta_{z} \partial_{\rho}B_{z} \right] \\
-B_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ w \epsilon \partial_{\rho} E_{z}+ \frac{\beta_{z}}{\rho} \partial_{\phi}B_{z} \right] 	
+	\textbf{E}_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \beta_{z} \partial_{\rho} \textbf{E}_{z}+ \frac{w \mu}{\rho}\partial_{\phi}\textbf{B}_{z} \right] \\
+		\textbf{E}_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{-\beta_{z}}{\rho} \partial_{\phi} \textbf{E}_{z}+ w \mu\partial_{\rho}\textbf{B}_{z} \right] \\
+\textbf{B}_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{w \epsilon}{\rho} \partial_{\phi} \textbf{E}_{z}- \beta_{z} \partial_{\rho}\textbf{B}_{z} \right] \\
+\textbf{B}_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ w \epsilon \partial_{\rho} \textbf{E}_{z}+ \frac{\beta_{z}}{\rho} \partial_{\phi}\textbf{B}_{z} \right] 	
 \end{eqnarray}
 Satisfaciendo en laplaciano en coordenadas cilindricas
 \begin{equation}\label{laplacianmetal}
-\frac{1}{\rho}\partial_{\rho}(\rho \partial_{\rho} B_{z}) + \frac{1}{\rho^2} \partial_{\phi}^2 B_{z}-(\beta_{z}^2-\beta^2)B_{z}=0
+\frac{1}{\rho}\partial_{\rho}(\rho \partial_{\rho} \textbf{B}_{z}) + \frac{1}{\rho^2} \partial_{\phi}^2 \textbf{B}_{z}-(\beta_{z}^2-\beta^2)\textbf{B}_{z}=0
 \end{equation}
 Donde
 \begin{equation}
@@ -147,7 +147,7 @@ Donde
 \end{equation}
 Utilizando separación de variables de la forma
 \begin{equation}\label{sphericalmetal}
-B_{z}=R(\rho)\Phi(\phi)e^{-i\beta_{z}z}
+\textbf{B}_{z}=R(\rho)\Phi(\phi)e^{-i\beta_{z}z}
 \end{equation}
 Sustituyendo \ref{sphericalmetal} en \ref{laplacianmetal} y acomodando, obtenemos la ecuación diferencial
 \begin{equation}
@@ -160,11 +160,11 @@ R(\rho)=C_{n}J_{n}(\beta_{c}\rho)
 \end{eqnarray}
 y que tiene las soluciones generales
 \begin{eqnarray}
-	E_{\rho}=i\frac{i w \mu n}{\beta_{c}^2\rho}J_{n}(\beta_{c}\rho)(A_{n}\sin(n\phi)-B_{n}\cos(n \phi))e^{-iB_{z}z} \\
-	E_{\phi}=i\frac{i w \mu }{\beta_{c}}J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-iB_{z}z}\\
-	B_{\rho}=-\frac{\beta_{z}}{w\mu}E_{\phi}\\
-	B_{\phi}=\frac{\beta_{z}}{w\mu}E_{\rho}\\
-	H_{z}=J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-iB_{z}z}
+	\textbf{E}_{\rho}=i\frac{i w \mu n}{\beta_{c}^2\rho}J_{n}(\beta_{c}\rho)(A_{n}\sin(n\phi)-B_{n}\cos(n \phi))e^{-i\textbf{B}_{z}z} \\
+	\textbf{E}_{\phi}=i\frac{i w \mu }{\beta_{c}}J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-i\textbf{B}_{z}z}\\
+	\textbf{B}_{\rho}=-\frac{\beta_{z}}{w\mu}\textbf{E}_{\phi}\\
+	\textbf{B}_{\phi}=\frac{\beta_{z}}{w\mu}\textbf{E}_{\rho}\\
+	\textbf{B}_{z}=J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-i\textbf{B}_{z}z}
 \end{eqnarray}
 Donde $J_{n}(\beta_{c}\rho)$ son los polinomios de Bessel.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,7 +179,7 @@ Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden 
 Donde $t$ es la componente transversal
 \begin{subequations}
 	\begin{align}
-	\mathbf{B}_{t}=\frac{}{\gamma^2} [D_{t}(\partial_{z}\mathbf{B}_{z})+i\mu \epsilon \frac{w}{v} e_{3}\wedge D_{t}\mathbf{E}_{z}]
+	\mathbf{B}_{t}=\frac{}{\gamma^2} [D_{t}(\partial_{z}\mathbf{B}_{z})+i\mu \epsilon \frac{w}{v} e_{3}\times D_{t}\mathbf{E}_{z}]
 	\end{align}
 \end{subequations}
 Desarrollando todas las componentes implicada
@@ -235,17 +235,17 @@ Se tienen soluciones oscilatorias dentro de la fibra y con caída exponencial fu
 \end{equation}
 Utilizando las ecuaciones de Helmholtz en forma cartesiana
 \begin{eqnarray} \label{Heldiecua}
-H_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}B_{z}-w \epsilon \partial_{y}E_{z}) \\
-H_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}B_{z}-w \epsilon \partial_{x}E_{z}) \\
-E_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}E_{z}-w \mu \partial_{y}B_{z}) \\
-E_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}E_{z}-w \mu \partial_{x}B_{z}) \\
+\textbf{B}_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}\textbf{B}_{z}-w \epsilon \partial_{y}\textbf{E}_{z}) \\
+\textbf{B}_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}\textbf{B}_{z}-w \epsilon \partial_{x}\textbf{E}_{z}) \\
+\textbf{E}_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}\textbf{E}_{z}-w \mu \partial_{y}\textbf{B}_{z}) \\
+\textbf{E}_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}\textbf{E}_{z}-w \mu \partial_{x}\textbf{B}_{z}) \\
 \end{eqnarray}
 Operando con \ref{diemax} en \ref{Heldiecua} obtenemos las ecuaciones de los campos en todo el espacio.
 \begin{eqnarray}
-B_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}B_{0}+w\epsilon k_{y}E_{0})\sin(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-B_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}B_{0}+w\epsilon k_{y}E_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-E_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}E_{0}+w\mu k_{y}E_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-E_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}E_{0}+w\mu k_{x}B_{0})\sin(k_{x}x+\phi_{x})\cos(k_{y}y+\phi_{y})\\
+\textbf{B}_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}\textbf{B}_{0}+w\epsilon k_{y}\textbf{E}_{0})\sin(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+\textbf{B}_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}\textbf{B}_{0}+w\epsilon k_{y}\textbf{E}_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+\textbf{E}_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}\textbf{E}_{0}+w\mu k_{y}\textbf{E}_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+\textbf{E}_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}\textbf{E}_{0}+w\mu k_{x}\textbf{B}_{0})\sin(k_{x}x+\phi_{x})\cos(k_{y}y+\phi_{y})\\
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}
