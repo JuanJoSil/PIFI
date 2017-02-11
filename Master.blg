@@ -8,6 +8,4 @@ A level-1 auxiliary file: Chapter4.aux
 A level-1 auxiliary file: Chapter5.aux
 A level-1 auxiliary file: Appendix1.aux
 The style file: ieeetr.bst
-I found no \citation commands---while reading file Master.aux
-Database file #1: ref.bib
-(There was 1 error message)
+Database file #1: references.bib

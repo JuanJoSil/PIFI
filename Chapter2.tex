@@ -3,44 +3,52 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Sobre guías de ondas}
 %\addcontentsline{toc}{chapter}{\ Thorough Derivation of the Rabi \mathbf{E}quation}
-En este capitulo se estudiara el comportamiento de los campos electromagnéticos a través de guías de ondas o fibras. Se empezara con la deducción de las ecuaciones de Helmoltz para una onda plana en dos dimensiones, y de ahí se partirá en la deducciones de los campos en fibras metálicas para configuraciones cilíndricas y cuadradas. Posteriormente se estudiaran las fibras dieléctricas también en las mismas configuraciones. Al final del capitulo se empiezan a experimentar con acoplamientos entre fibras dieléctricas y sus posibles interacciones. Al final de cada apartado se encuentra una simulación computacional del fenómeno Los códigos se pueden encontrar en anexos.
+En este capítulo se estudiará el comportamiento de los campos electromagnéticos a través de guías de ondas o fibras. Se empezara con la deducción de las ecuaciones de Helmoltz para una onda plana en dos dimensiones, y de ahí se partirá en la deducciones de los campos en fibras metálicas para configuraciones cilíndricas y cuadradas. Posteriormente se estudiaran las fibras dieléctricas también en las mismas configuraciones. Al final del capitulo se empiezan a experimentar con acoplamientos entre fibras dieléctricas y sus posibles interacciones. Al final de cada apartado se encuentra una simulación computacional del fenómeno Los códigos se pueden encontrar en anexos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ecuaciones de Helmholtz}
+
+Se empieza con las ecuaciones de Maxwell en un medio homogéneo, isotrópico y lineal, sin cargas ni corrientes libres \cite{Stratton1941}
 \begin{subequations}\label{Maxwell}
-	Se empieza con las ecuaciones de Maxwell en espacio vacío sin cargas libres.
-	\begin{align}
-	\nabla \cdot \mathbf{E} = 0,\label{Primera}\\
-	\nabla \times \mathbf{E} = - \partial_{t} \mathbf{B},\label{segunda}\\
-	\nabla \cdot \mathbf{B} = 0,\label{tercera}\\
-	\nabla \times \mathbf{B} =  \frac{1}{v^2} \partial_{t} \mathbf{E},\label{cuarta}
-	\end{align}
+	\begin{eqnarray}
+	\nabla \cdot \mathbf{E} &=& 0,\label{Primera}\\
+	\nabla \times \mathbf{E} &=& - \partial_{t} \mathbf{B},\label{segunda}\\
+	\nabla \cdot \mathbf{B} &=& 0,\label{tercera}\\
+	\nabla \times \mathbf{B} &=&  \frac{1}{v^2} \partial_{t} \mathbf{E},\label{cuarta}
+	\end{eqnarray}
 \end{subequations}
-Los campos magnético y eléctrico se pueden escribir en coordenadas cartesianas en la forma.
+donde los campos electricos y magnéticos estan representados por $\mathbf{E} \equiv \mathbf{E}(\mathbf{r},t)$ y $\mathbf{B} \equiv \mathbf{B}(\mathbf{r},t)$ con una rapidez de propagación en el medio dada por $v$. Además se uso la notación corta $\partial_{t}$ para representar la derivada con respecto al tiempo.
+
+
+Un campo electromagnético monocromático que se propaga en la dirección $+z$ se puede escribir en coordenadas cartesianas en la forma.
 \begin{subequations}\label{Camposincidentes}
-	\begin{align}
-	\hat{\mathbf{E}_{0}} = \mathbf{E}_{x}\hat{x} + \mathbf{E}_{y}\hat{y}+\mathbf{E}_{z}\hat{z} \\
-	\hat{\mathbf{B}_{0}} = \mathbf{B}_{x}\hat{x} + \mathbf{B}_{y}\hat{y}+\mathbf{B}_{z}\hat{z}
-	\end{align}
+	\begin{eqnarray}
+	\mathbf{E} &=& \left[E_{x}(\mathbf{r}) ~ \hat{x} + E_{y}(\mathbf{r})~ \hat{y} + E_{z}(\mathbf{r})~ \hat{z} \right] e^{ i k z - i \omega t }, \\
+	\mathbf{B} &=& \left[B_{x}(\mathbf{r})~ \hat{x} + B_{y}(\mathbf{r})~ \hat{y} + B_{z}(\mathbf{r})~ \hat{z} \right] e^{i k z - i  \omega t},
+	\end{eqnarray}
 \end{subequations}
-Aplicando las ecuaciones de Maxwell a los campos magnético y eléctrico se obtiene.
+donde la posición en el plano transversal a la dirección de propagación está dada por $\rho = \sqrt{x^2 + y^2}$.
+
+Sustituyendo estos campos en las ecuaciones de Maxwell se obtiene.
 \begin{subequations}\label{Camposexplicitos}
-	\begin{align}
-	\partial_{y}\mathbf{E}_{x}-\partial_{x}\mathbf{E}_{y}= i w \mathbf{B}_{z} \\
-	i k \mathbf{E}_{x}-\partial_{x}\mathbf{E}_{z}= i w \mathbf{B}_{y} \\
-	\partial_{y}\mathbf{E}_{z}-i k \mathbf{E}_{y}= i w \mathbf{B}_{x} \\
-	\partial_{x}\mathbf{B}_{z}-\partial_{y}\mathbf{B}_{x}= \frac{-iw \mathbf{E}_{Z} }{v^2} \\
-	i k \mathbf{B}_{x}-\partial_{x}\mathbf{B}_{z}= \frac{-iw \mathbf{E}_{y} }{v^2} \\
-	\partial_{y}\mathbf{B}_{z}- i k \mathbf{B}_{y}= \frac{-iw \mathbf{E}_{x} }{v^2} 
-	\end{align}
+	\begin{eqnarray}
+	\partial_{y}\mathbf{E}_{x}-\partial_{x}\mathbf{E}_{y} &=& i w \mathbf{B}_{z}, \\
+	i k \mathbf{E}_{x}-\partial_{x}\mathbf{E}_{z} &=& i w \mathbf{B}_{y}, \\
+	\partial_{y}\mathbf{E}_{z}-i k \mathbf{E}_{y} &=& i w \mathbf{B}_{x}, \\
+	\partial_{x}\mathbf{B}_{z}-\partial_{y}\mathbf{B}_{x} &=& \frac{-iw \mathbf{E}_{Z} }{v^2}, \\
+	i k \mathbf{B}_{x}-\partial_{x}\mathbf{B}_{z} &=& \frac{-iw \mathbf{E}_{y} }{v^2} ,\\
+	\partial_{y}\mathbf{B}_{z}- i k \mathbf{B}_{y} &=& \frac{-iw \mathbf{E}_{x} }{v^2},
+	\end{eqnarray}
 \end{subequations}
+donde hemos obviado la depenencia espaciotemporal, $\mathbf{E}_{i} \equiv \mathbf{E}_{i}(\rho,t)$ y $\mathbf{B}_{i} \equiv \mathbf{B}_{i}(\rho,t)$.
+
 %Parte 3 waveguide fisico
-Operando entre ellas se puede llegar ha
+Despejando entre ellas se puede llegar a:
 \begin{subequations}\label{Ecuacionesdecampo}
 	\begin{align}
-	\mathbf{E}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{E}_{z}+w \partial_{y} \mathbf{B}_{z}) \\
-	\mathbf{E}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{E}_{z}-w \partial_{x} \mathbf{B}_{z}) \\
-	\mathbf{B}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{y} \mathbf{E}_{z}) \\
-	\mathbf{B}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{x} \mathbf{E}_{z}) 
+	\mathbf{E}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{E}_{z}+w \partial_{y} \mathbf{B}_{z}), \\
+	\mathbf{E}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{E}_{z}-w \partial_{x} \mathbf{B}_{z}), \\
+	\mathbf{B}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{y} \mathbf{E}_{z}), \\
+	\mathbf{B}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{x} \mathbf{E}_{z}). 
 	\end{align}
 \end{subequations}
 La deducción mas detallada de las formulas se puede encontrar en anexos. Acoplando los campos y factorizando, podemos llegar a la forma básica de la ecuación de Helmholtz 
@@ -51,7 +59,7 @@ La deducción mas detallada de las formulas se puede encontrar en anexos. Acopla
 	\end{align}
 \end{subequations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Guías en fibras metálicas}
+\subsection{Guias metálica}
 Las ecuaciones de Maxwell en el interior de una fibra metálica tiene la forma.
 \begin{subequations} \label{mawxellmetalicas}
 	\begin{eqnarray}
@@ -68,11 +76,7 @@ Operando el rotaciones en la ultima ecuacion y usando la identidad del triple pr
 	\nabla^2 \mathbf{B}=\mu \epsilon \partial_{t}^2\mathbf{B}+\mu\sigma \partial_{t} \mathbf{B} 
 	\end{align}
 \end{subequations}
-Utilizando la formulación imaginaria de los campos
-\begin{eqnarray}
-\mathbf{\mathbf{E}}(\vec{r},t) &=& \mathbf{E}_{0}(\vec{r}_{\perp}) e^{\hat{k}z-wt} ; \\
-\mathbf{\mathbf{B}}(\vec{r},t) &=& \mathbf{B}_{0}(\vec{r}_{\perp}) e^{\hat{k}z-wt} 
-\end{eqnarray}
+Utilizando la formulación imaginaria de los campos, Eq.(\ref{Camposincidentes}), puedo encontrar la relación de dispersión para 
 Operando con ellas y usando las ecuaciones~\ref{potencialmetalico}, obtenemos una ecuacion para
 el numero de onda
 \begin{equation}
@@ -120,13 +124,17 @@ como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
 		\end{eqnarray}
 	Proponiendo  
 		\begin{eqnarray}
-	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  
+	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  , \qquad  X= E_{z},B_{z}
 \end{eqnarray}
 	metendielo en las ecuaciones originales
 	\begin{eqnarray}
-		\mathbf{E}_{z}=E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a}) \\
-	\mathbf{B}_{z}=B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
-	k = \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
+	\mathbf{E}_{x}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
+	\mathbf{E}_{y}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
+	\mathbf{E}_{z}&=& \\
+	\mathbf{B}_{x}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
+	\mathbf{B}_{y}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
+	\mathbf{B}_{z}&=&  \\
+	k &=& \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}

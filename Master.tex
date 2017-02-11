@@ -6,7 +6,8 @@
 \usepackage[utf8]{inputenc} %Permite al usuario introducir caracteres acentuados directamente desde el teclado (latin1, utf8, koi8r) Tambien se puede usar ambos (\usepackage[T1]{fontenc} y \usepackage[latin1]{inputenc}) La combinación inputenc-fontenc parece lento y engorroso, pero es seguro. Esta combinacion s útil para documentos en inglés; tan pronto como utilices cualquier caracter fuera del codigo ASCII, necesitarás estos paquetes.
 \usepackage{graphicx} %Para importar las gráficas
 \usepackage{makeidx} %Crea un indice con \makeindex
-\usepackage[english]{babel} %Permite escribir lenguaje en español (ñ)
+\usepackage[spanish]{babel} %Permite escribir lenguaje en español (ñ)
+\selectlanguage{spanish}%Permite escribir lenguaje en español (ñ)
 \usepackage{xcolor} %Soporta un gran numero de colores y es mas flexible que color
 \usepackage{hyperref} %Maneja  los comandos de referencias cruzadas para producir enlaces de hipertexto en el documento, útil cuando el formato resultante es PDF y los hipervínculos pueden seguirse. [colorlinks] escribe ()citas, indice, figuras, tablas, pie de notas) en rojo sin recuadros, [colorlinks=false] u omitiendolo escribe en negro con cuadros rojos,  [colorlinks=false, linktocpage=true] escribe en negro con cuadros rojos unicamente las paginas y citas.
 \usepackage{cite} %Comprime listas de 3 o mas citas consecutivas
@@ -96,7 +97,7 @@
 \backmatter
 
 	\bibliographystyle{ieeetr}	
-	\bibliography{ref}
+	\bibliography{references}
 
 
 \end{document} 
