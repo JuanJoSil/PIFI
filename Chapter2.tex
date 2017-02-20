@@ -3,40 +3,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Sobre guías de ondas}
 %\addcontentsline{toc}{chapter}{\ Thorough Derivation of the Rabi \mathbf{E}quation}
-En este capítulo se estudiará el comportamiento de los campos electromagnéticos a través de guías de ondas o fibras. Se empezara con la deducción de las ecuaciones de Helmoltz para una onda plana en dos dimensiones, y de ahí se partirá en la deducciones de los campos en fibras metálicas para configuraciones cilíndricas y cuadradas. Posteriormente se estudiaran las fibras dieléctricas también en las mismas configuraciones. Al final del capitulo se empiezan a experimentar con acoplamientos entre fibras dieléctricas y sus posibles interacciones. Al final de cada apartado se encuentra una simulación computacional del fenómeno Los códigos se pueden encontrar en anexos.
+\par En este capítulo se estudiará el comportamiento de los campos electromagnéticos a través de guías de ondas o fibras. Se empezara con la deducción de las ecuaciones de Helmoltz para una onda plana en dos dimensiones, y de ahí se partirá en la deducciones de los campos en fibras metálicas para configuraciones cilíndricas y cuadradas. \par Posteriormente se estudiaran las fibras dieléctricas también en las mismas configuraciones. Al final del capitulo se empiezan a experimentar con acoplamientos entre fibras dieléctricas y sus posibles interacciones. Al final de cada apartado se encuentra una simulación computacional del fenómeno Los códigos se pueden encontrar en anexos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ecuaciones de Helmholtz}
-
-Se empieza con las ecuaciones de Maxwell en un medio homogéneo, isotrópico y lineal, sin cargas ni corrientes libres \cite{Stratton1941}
+\par Se empieza con las ecuaciones de Maxwell en un medio homogéneo, isotrópico y lineal, sin cargas ni corrientes libres \cite{GriffithsElec}
 \begin{subequations}\label{Maxwell}
 	\begin{eqnarray}
 	\nabla \cdot \mathbf{E} &=& 0,\label{Primera}\\
 	\nabla \times \mathbf{E} &=& - \partial_{t} \mathbf{B},\label{segunda}\\
 	\nabla \cdot \mathbf{B} &=& 0,\label{tercera}\\
-	\nabla \times \mathbf{B} &=&  \frac{1}{v^2} \partial_{t} \mathbf{E},\label{cuarta}
+	\nabla \times \mathbf{B} &=&  \frac{1}{v^2} \partial_{t} \mathbf{E},\label{cuarta},
 	\end{eqnarray}
 \end{subequations}
-donde los campos electricos y magnéticos estan representados por $\mathbf{E} \equiv \mathbf{E}(\mathbf{r},t)$ y $\mathbf{B} \equiv \mathbf{B}(\mathbf{r},t)$ con una rapidez de propagación en el medio dada por $v$. Además se uso la notación corta $\partial_{t}$ para representar la derivada con respecto al tiempo.
+\par donde los campos electricos y magnéticos estan representados por $\mathbf{E} \equiv \mathbf{E}(\mathbf{r},t)$ y $\mathbf{B} \equiv \mathbf{B}(\mathbf{r},t)$ con una rapidez de propagación en el medio dada por $v$. Además se uso la notación corta $\partial_{t}$ para representar la derivada con respecto al tiempo.
 
 
-Un campo electromagnético monocromático que se propaga en la dirección $+z$ se puede escribir en coordenadas cartesianas en la forma.
+\par Un campo electromagnético monocromático que se propaga en la dirección $+z$ se puede escribir en coordenadas cartesianas en la forma.
 \begin{subequations}\label{Camposincidentes}
 	\begin{eqnarray}
-	\mathbf{E} &=& \left[E_{x}(\mathbf{r}) ~ \hat{x} + E_{y}(\mathbf{r})~ \hat{y} + E_{z}(\mathbf{r})~ \hat{z} \right] e^{ i k z - i \omega t }, \\
-	\mathbf{B} &=& \left[B_{x}(\mathbf{r})~ \hat{x} + B_{y}(\mathbf{r})~ \hat{y} + B_{z}(\mathbf{r})~ \hat{z} \right] e^{i k z - i  \omega t},
+	\mathbf{E} &=& \left[E_{x}(\mathbf{\rho}) ~ \hat{x} + E_{y}(\mathbf{\rho})~ \hat{y} + E_{z}(\mathbf{\rho})~ \hat{z} \right] e^{ i k z - i \omega t }, \\
+	\mathbf{B} &=& \left[B_{x}(\mathbf{\rho})~ \hat{x} + B_{y}(\mathbf{\rho})~ \hat{y} + B_{z}(\mathbf{\rho})~ \hat{z} \right] e^{i k z - i  \omega t},
 	\end{eqnarray}
 \end{subequations}
-donde la posición en el plano transversal a la dirección de propagación está dada por $\rho = \sqrt{x^2 + y^2}$.
+\par donde la posición en el plano transversal a la dirección de propagación está dada por $\rho = \sqrt{x^2 + y^2}$. En esta formulación de los campos se ha usado una aproximación paraxial al eje de vertical de la guía de onda.
 
-Sustituyendo estos campos en las ecuaciones de Maxwell se obtiene.
+Sustituyendo estos campos en las ecuaciones de Maxwell se obtiene\cite{GriffithsElec}.
 \begin{subequations}\label{Camposexplicitos}
 	\begin{eqnarray}
-	\partial_{y}\mathbf{E}_{x}-\partial_{x}\mathbf{E}_{y} &=& i w \mathbf{B}_{z}, \\
-	i k \mathbf{E}_{x}-\partial_{x}\mathbf{E}_{z} &=& i w \mathbf{B}_{y}, \\
-	\partial_{y}\mathbf{E}_{z}-i k \mathbf{E}_{y} &=& i w \mathbf{B}_{x}, \\
-	\partial_{x}\mathbf{B}_{z}-\partial_{y}\mathbf{B}_{x} &=& \frac{-iw \mathbf{E}_{Z} }{v^2}, \\
-	i k \mathbf{B}_{x}-\partial_{x}\mathbf{B}_{z} &=& \frac{-iw \mathbf{E}_{y} }{v^2} ,\\
-	\partial_{y}\mathbf{B}_{z}- i k \mathbf{B}_{y} &=& \frac{-iw \mathbf{E}_{x} }{v^2},
+	\partial_{y} E_{x}-\partial_{x} E_{y} &=& i w B_{z}, \\
+	i k E_{x}-\partial_{x} E_{z} &=& i w B_{y}, \\
+	\partial_{y} E_{z}-i k E_{y} &=& i w B_{x}, \\
+	\partial_{x} B_{z}-\partial_{y} B_{x} &=& \frac{-iw E_{Z} }{v^2}, \\
+	i k B_{x}-\partial_{x} B_{z} &=& \frac{-iw E_{y} }{v^2} ,\\
+	\partial_{y} B_{z}- i k B_{y} &=& \frac{-iw E_{x} }{v^2},
 	\end{eqnarray}
 \end{subequations}
 donde hemos obviado la depenencia espaciotemporal, $\mathbf{E}_{i} \equiv \mathbf{E}_{i}(\rho,t)$ y $\mathbf{B}_{i} \equiv \mathbf{B}_{i}(\rho,t)$.
@@ -45,229 +44,178 @@ donde hemos obviado la depenencia espaciotemporal, $\mathbf{E}_{i} \equiv \mathb
 Despejando entre ellas se puede llegar a:
 \begin{subequations}\label{Ecuacionesdecampo}
 	\begin{align}
-	\mathbf{E}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{E}_{z}+w \partial_{y} \mathbf{B}_{z}), \\
-	\mathbf{E}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{E}_{z}-w \partial_{x} \mathbf{B}_{z}), \\
-	\mathbf{B}_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{y} \mathbf{E}_{z}), \\
-	\mathbf{B}_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}\mathbf{B}_{z}- \frac{w}{v^2} \partial_{x} \mathbf{E}_{z}). 
+	E_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x} E_{z}+w \partial_{y} B_{z}), \\
+	E_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y} E_{z}-w \partial_{x} B_{z}), \\
+	B_{x} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{x}B_{z}- \frac{w}{v^2} \partial_{y} E_{z}), \\
+	B_{y} = \frac{i}{(\frac{w}{v})^2 - k^2} (k \partial_{y}B_{z}- \frac{w}{v^2} \partial_{x} E_{z}), 
 	\end{align}
 \end{subequations}
-La deducción mas detallada de las formulas se puede encontrar en anexos. Acoplando los campos y factorizando, podemos llegar a la forma básica de la ecuación de Helmholtz 
+\par Una deducción mas detallada de las formulas se puede encontrar en \cite{GriffithsElec}. Acoplando los campos y factorizando, podemos llegar a la forma básica de la ecuación de Helmholtz 
 \begin{subequations}\label{Helmholtz}
 	\begin{align}
-	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] \mathbf{E}_{z}=0\\
-	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] \mathbf{B}_{z}=0
+	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] E_{z}=0\\
+	[\partial_{x}^2+\partial_{y}^2+(\frac{w}{v})^2-k^2] B_{z}=0,
 	\end{align}
 \end{subequations}
+\par Este conjunto de ecuaciones derivadas para el caso particular de 3 dimensión en coordenadas cartesianas se pueden generalizar a un conjunto de ecuaciones independiente de coordenadas, como se ve mas adelante en la ecuación \ref{HelmholtzGeneralizado}. Basta con resolver estas ecuaciones diferenciales parciales para encontrar una solución al comportamiento de los campos dentro de las fibras. 
+\par Particularmente se puede observar que estas ecuaciones soportan soluciones para el caso de $E_{z}\quad=\quad0$ , $B_{z}\quad =\quad 0$ . El primer caso es conocido como TE o modo transversal eléctrico y el segundo como  TM o modo transversal magnético, el caso en donde ambos campos son  0 es conocido como TEM o modo transversal electromagnético
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Guias metálica}
-Las ecuaciones de Maxwell en el interior de una fibra metálica tiene la forma.
-\begin{subequations} \label{mawxellmetalicas}
-	\begin{eqnarray}
-	\nabla \cdot \mathbf{E} &=& 0 ,\\
-	\nabla \times \mathbf{E} &=& \partial_{t}\mathbf{B}, \\
-	\nabla \cdot \mathbf{B} &=& 0, \\ 
-	\nabla \times \mathbf{B} &=& \mu \epsilon \mathbf{E} + \mu \sigma \mathbf{E}  
-	\end{eqnarray}
-\end{subequations}
-Operando el rotaciones en la ultima ecuacion y usando la identidad del triple producto vectorial obtenemos
-\begin{subequations}\label{potencialmetalico}
-	\begin{align}
-	\nabla^2 \mathbf{E}=\mu \epsilon \partial_{t}^2\mathbf{E}+\mu\sigma \partial_{t} \mathbf{E} \\
-	\nabla^2 \mathbf{B}=\mu \epsilon \partial_{t}^2\mathbf{B}+\mu\sigma \partial_{t} \mathbf{B} 
-	\end{align}
-\end{subequations}
-Utilizando la formulación imaginaria de los campos, Eq.(\ref{Camposincidentes}), puedo encontrar la relación de dispersión para 
-Operando con ellas y usando las ecuaciones~\ref{potencialmetalico}, obtenemos una ecuacion para
-el numero de onda
-\begin{equation}
-k^2=\mu \epsilon w^2 + i \mu \sigma w, \qquad k \in \mathbb{C}, \quad \mu, \epsilon, \sigma \in \mathbb{R}
-\end{equation}
-Quitando las dependecia de la frecuencia $w$ 
-\begin{subequations}
-	\begin{eqnarray}
-	(k+i\kappa)^2 &=& k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \nonumber \\
-	k^2 - \kappa^2 &=& \mu \epsilon w^2, \\ 
-	2 k \kappa &=& \mu \sigma w \nonumber \\
-	\end{eqnarray}
-\end{subequations}
-por lo que 
-\begin{eqnarray}
-\kappa &=& \frac{\mu \epsilon w}{2 k}
-\end{eqnarray}
-
-
-Metiendo las equivalencias obtenidas a las ecuaciones originales 
-\begin{subequations}
-	\begin{eqnarray}
-	k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \nonumber\\
-	\end{eqnarray}
-\end{subequations}
-Completando cuadrados llegamos a 
-\begin{subequations}
-	\begin{eqnarray}
-	k= w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1+\left(\frac{\sigma}{\epsilon w} \right)^2}+1 \right]^\frac{1}{2}
-	\end{eqnarray}
-\end{subequations}
-como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
-\begin{subequations}
-	\begin{eqnarray}
-	\kappa = w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1 + \left(\frac{\sigma}{\epsilon w} \right)^2}-1\right]^\frac{1}{2}
-	\end{eqnarray}
-\end{subequations}
+\subsection{Guías dieléctricas con frontera metálica}
+\par Para este apartado se resolverá las ecuaciones de Helmholtz dentro de un guía con paredes metálicas y en cuyo interior se encuentra algún material dieléctrico. Estas guías soportan modos puros de onda, es decir modos TE o TM, sin embargo los modos TEM no son una solución viables para este tipo de fibras. Se procederá a resolver dos configuraciones: para geometría cuadrada y circular, las dos para el caso de modos TE. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías cuadradas}
 \begin{eqnarray}
-	\mathbf{B}_{z}(x,y)=X(x)Y(y) \nonumber \\
+	B_{z}(x,y)=X(x)Y(y) \nonumber \\
 	Y \partial_{x}^2 X+X \partial_{y}^2Y + [(\frac{w}{v})^2-k^2]XY=0 \nonumber \\
 	\frac{1}{X} \partial_{x}^2 X=-k_{x}^2 ; \frac{1}{Y}\partial_{y}^2 Y = -K_{y}^2 \nonumber \\
-	-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber\\
+	-k_{x}^2 - k_{y}^2+(\frac{w}{v})^2 - k^2 = 0 \nonumber,\\
 		\end{eqnarray}
 	Proponiendo  
 		\begin{eqnarray}
-	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  , \qquad  X= E_{z},B_{z}
+	X(x)=A \sin (K_{x} x) + B \cos(k_{x}x)  , 
 \end{eqnarray}
 	metendielo en las ecuaciones originales
 	\begin{eqnarray}
-	\mathbf{E}_{x}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
-	\mathbf{E}_{y}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
-	\mathbf{E}_{z}&=& \\
-	\mathbf{B}_{x}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
-	\mathbf{B}_{y}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
-	\mathbf{B}_{z}&=&  \\
-	k &=& \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]} 
+	E_{x}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
+	E_{y}&=&, \propto E_{0} \sin(m \pi \frac{x}{a}) \sin(n \pi \frac{y}{a})\\
+	E_{z}&=& \\
+	B_{x}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
+	B_{y}&=& , \propto B_{0} \cos(m \pi \frac{x}{a}) \cos(n \pi \frac{y}{a}) \\
+	B_{z}&=&  \\
+	k &=& \sqrt{(\frac{w}{v})^2-\pi^2 [(\frac{m}{a})^2+(\frac{n}{b})^2]}, 
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}
 Las ecuaciones de Helmholtz en coordenas cilindricas toman la forma
 \begin{eqnarray}
-	\textbf{E}_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \beta_{z} \partial_{\rho} \textbf{E}_{z}+ \frac{w \mu}{\rho}\partial_{\phi}\textbf{B}_{z} \right] \\
-		\textbf{E}_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{-\beta_{z}}{\rho} \partial_{\phi} \textbf{E}_{z}+ w \mu\partial_{\rho}\textbf{B}_{z} \right] \\
-\textbf{B}_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{w \epsilon}{\rho} \partial_{\phi} \textbf{E}_{z}- \beta_{z} \partial_{\rho}\textbf{B}_{z} \right] \\
-\textbf{B}_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ w \epsilon \partial_{\rho} \textbf{E}_{z}+ \frac{\beta_{z}}{\rho} \partial_{\phi}\textbf{B}_{z} \right] 	
+	E_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \beta_{z} \partial_{\rho} E_{z}+ \frac{w \mu}{\rho}\partial_{\phi}B_{z} \right] \\
+		E_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{-\beta_{z}}{\rho} \partial_{\phi} E_{z}+ w \mu\partial_{\rho}B_{z} \right] \\
+B_{\rho}=\frac{i}{\beta^2_{z}-\beta^2} \left[ \frac{w \epsilon}{\rho} \partial_{\phi} E_{z}- \beta_{z} \partial_{\rho}B_{z} \right] \\
+B_{\phi}=\frac{i}{\beta^2_{z}-\beta^2} \left[ w \epsilon \partial_{\rho} E_{z}+ \frac{\beta_{z}}{\rho} \partial_{\phi}B_{z} \right] 	,
 \end{eqnarray}
 Satisfaciendo en laplaciano en coordenadas cilindricas
 \begin{equation}\label{laplacianmetal}
-\frac{1}{\rho}\partial_{\rho}(\rho \partial_{\rho} \textbf{B}_{z}) + \frac{1}{\rho^2} \partial_{\phi}^2 \textbf{B}_{z}-(\beta_{z}^2-\beta^2)\textbf{B}_{z}=0
+\frac{1}{\rho}\partial_{\rho}(\rho \partial_{\rho} B_{z}) + \frac{1}{\rho^2} \partial_{\phi}^2 B_{z}-(\beta_{z}^2-\beta^2)B_{z}=0,
 \end{equation}
 Donde
 \begin{equation}
-	\beta_{c}^2=\beta^2-\beta_{z}^2
+	\beta_{c}^2=\beta^2-\beta_{z}^2,
 \end{equation}
 Utilizando separación de variables de la forma
 \begin{equation}\label{sphericalmetal}
-\textbf{B}_{z}=R(\rho)\Phi(\phi)e^{-i\beta_{z}z}
+B_{z}=R(\rho)\Phi(\phi)e^{-i\beta_{z}z},
 \end{equation}
 Sustituyendo \ref{sphericalmetal} en \ref{laplacianmetal} y acomodando, obtenemos la ecuación diferencial
 \begin{equation}
-\frac{\rho}{R}(R'+\rho R'')+\beta_{c}^2\rho^2=-\frac{\Phi''}{\Phi}=n^2
+\frac{\rho}{R}(R'+\rho R'')+\beta_{c}^2\rho^2=-\frac{\Phi''}{\Phi}=n^2,
 \end{equation} 
 Que tiene soluciones de la forma
 \begin{eqnarray}
 \Phi(\phi)=A_{n}\cos(n\phi)+B_{n}\sin(n\phi) \\
-R(\rho)=C_{n}J_{n}(\beta_{c}\rho)
+R(\rho)=C_{n}J_{n}(\beta_{c}\rho),
 \end{eqnarray}
 y que tiene las soluciones generales
 \begin{eqnarray}
-	\textbf{E}_{\rho}=i\frac{i w \mu n}{\beta_{c}^2\rho}J_{n}(\beta_{c}\rho)(A_{n}\sin(n\phi)-B_{n}\cos(n \phi))e^{-i\textbf{B}_{z}z} \\
-	\textbf{E}_{\phi}=i\frac{i w \mu }{\beta_{c}}J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-i\textbf{B}_{z}z}\\
-	\textbf{B}_{\rho}=-\frac{\beta_{z}}{w\mu}\textbf{E}_{\phi}\\
-	\textbf{B}_{\phi}=\frac{\beta_{z}}{w\mu}\textbf{E}_{\rho}\\
-	\textbf{B}_{z}=J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-i\textbf{B}_{z}z}
+	E_{\rho}=i\frac{i w \mu n}{\beta_{c}^2\rho}J_{n}(\beta_{c}\rho)(A_{n}\sin(n\phi)-B_{n}\cos(n \phi))e^{-iB_{z}z} \\
+	E_{\phi}=i\frac{i w \mu }{\beta_{c}}J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-iB_{z}z}\\
+	B_{\rho}=-\frac{\beta_{z}}{w\mu}E_{\phi}\\
+	B_{\phi}=\frac{\beta_{z}}{w\mu}E_{\rho}\\
+	B_{z}=J_{n}(\beta_{c}\rho)(A_{n}\cos(n\phi)+B_{n}\sin(n \phi))e^{-iB_{z}z},
 \end{eqnarray}
 Donde $J_{n}(\beta_{c}\rho)$ son los polinomios de Bessel.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Guías dieléctricas}
 Que son las ecuaciones de Helmholtz en dos dimensiones. Estas ecuaciones pueden ser generalizadas a
 \begin{subequations}
-	\begin{align}
-	\mathbf{B}_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} \mathbf{B}{z})+i\mu\epsilon\frac{w}{v}e_{3}\times D_{t}\mathbf{E}_{z} \\
-	\mathbf{E}_{t}=\frac{}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} \mathbf{E}{z})-i\frac{w}{v}e_{3}\times D_{t}\mathbf{B}_{z} 
+	\begin{align}\label{HelmholtzGeneralizado}
+	B_{t}=\frac{1}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} B{z})+i\mu\epsilon\frac{w}{v}e_{3}\times D_{t}E_{z} \\
+	E_{t}=\frac{1}{\mu \epsilon\frac{w^2}{c^2}-k^2}[D_{t} (\partial_{z} E_{z})-i\frac{w}{v}e_{3}\times D_{t}B_{z}, 
 	\end{align}
 	\end{subequations}
 Donde $t$ es la componente transversal
 \begin{subequations}
 	\begin{align}
-	\mathbf{B}_{t}=\frac{}{\gamma^2} [D_{t}(\partial_{z}\mathbf{B}_{z})+i\mu \epsilon \frac{w}{v} e_{3}\times D_{t}\mathbf{E}_{z}]
+	B_{t}=\frac{1}{\gamma^2} [D_{t}(\partial_{z}B_{z})+i\mu \epsilon \frac{w}{v} e_{3}\times D_{t}E_{z}],
 	\end{align}
 \end{subequations}
 Desarrollando todas las componentes implicada
 \begin{subequations}
 	\begin{align}
-\mathbf{B}_{rho} = \frac{ik}{\gamma^2}\partial_{rho}\mathbf{B}_{z} \qquad \mathbf{B}_{\phi} = \frac{i \epsilon w}{\gamma^2 v} \partial_{\rho} \mathbf{E}_{z}\\
-\mathbf{E}_{\phi} = \frac{-w}{v k }\mathbf{B}_{\rho} \qquad \mathbf{E}_{\rho} = \frac{v k}{\epsilon w} \mathbf{B}_{\phi}
+B_{rho} = \frac{ik}{\gamma^2}\partial_{rho}B_{z} \qquad B_{\phi} = \frac{i \epsilon w}{\gamma^2 v} \partial_{\rho} E_{z}\\
+E_{\phi} = \frac{-w}{v k }B_{\rho} \qquad E_{\rho} = \frac{v k}{\epsilon w} B_{\phi},
 	\end{align}
 \end{subequations}
 Con soluciones 
 \begin{eqnarray}
 	\begin{array}{ll}
-		\mathbf{B}_{z} = J_{0}(\gamma \rho) \qquad \nonumber \\
-		\mathbf{B}_{\rho } = \frac{-i k}{\gamma} J_{1} (\gamma \rho) \nonumber \\
-		\mathbf{E}_{\phi} = \frac{i w}{v \gamma} J_{1} (\gamma \rho)
-		\end{array} \Bigg\} \qquad \text{para}  \qquad \rho \leq a 
+		B_{z} = J_{0}(\gamma \rho) \qquad \nonumber \\
+		B_{\rho } = \frac{-i k}{\gamma} J_{1} (\gamma \rho) \nonumber \\
+		E_{\phi} = \frac{i w}{v \gamma} J_{1} (\gamma \rho)
+		\end{array} \Bigg\} \qquad \text{para}  \qquad \rho \leq a ,
 \end{eqnarray}
 \begin{eqnarray}
 \begin{array}{ll}
-\mathbf{B}_{z} = A K_{0}(\beta \rho) \qquad \nonumber \\
-\mathbf{B}_{\rho } = \frac{i k A}{\beta} K_{1} (\beta \rho) \nonumber \\
-\mathbf{E}_{\phi} = \frac{-i w A}{v \beta} K_{1} (\beta \rho)
-\end{array}  \Bigg\} \qquad \text{para}  \qquad \rho \geq a 
+B_{z} = A K_{0}(\beta \rho) \qquad \nonumber \\
+B_{\rho } = \frac{i k A}{\beta} K_{1} (\beta \rho) \nonumber \\
+E_{\phi} = \frac{-i w A}{v \beta} K_{1} (\beta \rho)
+\end{array}  \Bigg\} \qquad \text{para}  \qquad \rho \geq a ,
 \end{eqnarray}
 Condiciones de frontera a $pho=a$
 \begin{eqnarray}
 AK_{0}(\beta a) = J_{0}(\beta a)\\
--\frac{A}{B}K_{1}(\beta a) = \frac{J_{1}}{\gamma}(\gamma a)
+-\frac{A}{B}K_{1}(\beta a) = \frac{J_{1}}{\gamma}(\gamma a),
 \end{eqnarray}
 Despejando A
 \begin{eqnarray}
- A= \frac{J_{0}(\beta A)}{k_{0}(\beta a)}
+ A= \frac{J_{0}(\beta A)}{k_{0}(\beta a)},
 \end{eqnarray}
 Si sumamos y despejamos
 \begin{eqnarray}
-	\frac{J_{1}(\gamma a)}{\gamma J_{0}(\gamma a)}+\frac{K_{1}(\beta a)}{\beta K_{0}(\beta a)} = 0
+	\frac{J_{1}(\gamma a)}{\gamma J_{0}(\gamma a)}+\frac{K_{1}(\beta a)}{\beta K_{0}(\beta a)} = 0,
 	\end{eqnarray}
-Con la condicion
+Con la condición
 \begin{eqnarray}
-	\gamma^2+\beta^2=(\epsilon_{1}-\epsilon_{0})\frac{w^2}{v^2}
+	\gamma^2+\beta^2=(\epsilon_{1}-\epsilon_{0})\frac{w^2}{v^2},
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías cuadradas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Las misma ecuaciones para los campos que se obtuvieron en el caso de fibras metálicas cuadradas siguen siendo validas para este caso, solo que ahora tendremos que empatar en la fronteras para respetar la evolución de los campos en todo el espacio. Primeramente definamos las ecuaciones que describen los campos pero ahora con un desfase.
 \begin{eqnarray}\label{diemax}
-\mathbf{E}_{z}=E_{0} \sin(k_{x}x+\phi_{x}) \sin(k_{y}y+\phi_{y}) \\
-\mathbf{B}_{z}=B_{0} \cos(k_{x}x+\phi_{x}) \cos(k_{y}y+\phi_{y}) 
+E_{z}=E_{0} \sin(k_{x}x+\phi_{x}) \sin(k_{y}y+\phi_{y}) \\
+B_{z}=B_{0} \cos(k_{x}x+\phi_{x}) \cos(k_{y}y+\phi_{y}) ,
 \end{eqnarray}
 Se tienen soluciones oscilatorias dentro de la fibra y con caída exponencial fuera de ella. Se puede usar el hecho de que para que la formulación sea valida el campo eléctrico debe de ser un mínimo o máximo en la frontera.
 \begin{equation}
-	\sin(\frac{k_{x}a}{2}+\phi_{x})=\sin(\frac{k_{y}b}{2}+\phi_{y}) \quad = \quad \pm 1 \quad \vee \quad 0
+	\sin(\frac{k_{x}a}{2}+\phi_{x})=\sin(\frac{k_{y}b}{2}+\phi_{y}) \quad = \quad \pm 1 \quad \vee \quad 0 ,
 \end{equation}
 Utilizando las ecuaciones de Helmholtz en forma cartesiana
 \begin{eqnarray} \label{Heldiecua}
-\textbf{B}_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}\textbf{B}_{z}-w \epsilon \partial_{y}\textbf{E}_{z}) \\
-\textbf{B}_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}\textbf{B}_{z}-w \epsilon \partial_{x}\textbf{E}_{z}) \\
-\textbf{E}_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}\textbf{E}_{z}-w \mu \partial_{y}\textbf{B}_{z}) \\
-\textbf{E}_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}\textbf{E}_{z}-w \mu \partial_{x}\textbf{B}_{z}) \\
+B_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}B_{z}-w \epsilon \partial_{y}E_{z}) \\
+B_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}B_{z}-w \epsilon \partial_{x}E_{z}) \\
+E_{x}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{x}E_{z}-w \mu \partial_{y}B_{z}) \\
+E_{y}=\frac{-i}{k_{x}^2+k_{y}^2}(k_{z}\partial_{y}E_{z}-w \mu \partial_{x}B_{z}) , \\
 \end{eqnarray}
 Operando con \ref{diemax} en \ref{Heldiecua} obtenemos las ecuaciones de los campos en todo el espacio.
 \begin{eqnarray}
-\textbf{B}_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}\textbf{B}_{0}+w\epsilon k_{y}\textbf{E}_{0})\sin(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-\textbf{B}_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}\textbf{B}_{0}+w\epsilon k_{y}\textbf{E}_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-\textbf{E}_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}\textbf{E}_{0}+w\mu k_{y}\textbf{E}_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
-\textbf{E}_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}\textbf{E}_{0}+w\mu k_{x}\textbf{B}_{0})\sin(k_{x}x+\phi_{x})\cos(k_{y}y+\phi_{y})\\
+B_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}B_{0}+w\epsilon k_{y}E_{0})\sin(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+B_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}B_{0}+w\epsilon k_{y}E_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+E_{x}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{x}E_{0}+w\mu k_{y}E_{0})\cos(k_{x}x+\phi_{x})\sin(k_{y}y+\phi_{y})\\
+E_{y}=\frac{i}{k_{x}^2+k_{y}^2}(k_{z}k_{y}E_{0}+w\mu k_{x}B_{0})\sin(k_{x}x+\phi_{x})\cos(k_{y}y+\phi_{y}),\\
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Guías esféricas}
 \begin{subequations}
 	\begin{align}
 	\gamma^2 =  \mu_{1} \epsilon_{1} \frac{w^2}{v^2} - k^2   && \text{  Dentro}\\
-	\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}   && \text{ Fuera (onda desvaneciente)}
+	\beta^2 = k^2 - \mu_{0} \epsilon_{0} \frac{w^2}{v^2}   && \text{ Fuera (onda desvaneciente)},
 	\end{align}
 \end{subequations}
 La ecuacion de Helmholtz para variación azimutal toma la forma
 \begin{subequations}
 	\begin{align}
 	(\partial_{\rho}^2+\rho^{-1} \partial_{\rho}+\gamma^2) \psi = 0\\
-	(\partial_{\rho}^2+\rho^{-1} \partial_{\rho}-\beta^2) \psi = 0
+	(\partial_{\rho}^2+\rho^{-1} \partial_{\rho}-\beta^2) \psi = 0,
 	\end{align}
 \end{subequations}
 Que es la ecuación diferencial de Bessel y cuya solución toma la forma
@@ -276,10 +224,66 @@ Que es la ecuación diferencial de Bessel y cuya solución toma la forma
 \psi   & =  \Bigg\{ 
 \begin{array}{ll}
 J_{0}(\gamma \rho), \rho \leq a \hfill \\ 
- A k_{0} (\beta \rho), \rho > a 
+ A k_{0} (\beta \rho), \rho > a ,
  \end{array}
 \end{eqnarray}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acoplamientos}
+Las ecuaciones de Maxwell en el interior de una fibra metálica tiene la forma.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Separación de constante de propagación}
+\begin{subequations} \label{mawxellmetalicas}
+	\begin{eqnarray}
+	\nabla \cdot \mathbf{E} &=& 0 ,\\
+	\nabla \times \mathbf{E} &=& \partial_{t}\mathbf{B}, \\
+	\nabla \cdot \mathbf{B} &=& 0, \\ 
+	\nabla \times \mathbf{B} &=& \mu \epsilon \mathbf{E} + \mu \sigma \mathbf{E}  ,
+	\end{eqnarray}
+\end{subequations}
+Operando el rotaciones en la ultima ecuación y usando la identidad del triple producto vectorial obtenemos
+\begin{subequations}\label{potencialmetalico}
+	\begin{align}
+	\nabla^2 \mathbf{E}=\mu \epsilon \partial_{t}^2\mathbf{E}+\mu\sigma \partial_{t} \mathbf{E} \\
+	\nabla^2 \mathbf{B}=\mu \epsilon \partial_{t}^2\mathbf{B}+\mu\sigma \partial_{t} \mathbf{B} ,
+	\end{align}
+\end{subequations}
+Utilizando la formulación imaginaria de los campos, Eq.(\ref{Camposincidentes}), puedo encontrar la relación de dispersión para 
+Operando con ellas y usando las ecuaciones~\ref{potencialmetalico}, obtenemos una ecuación para
+el numero de onda
+\begin{equation}
+k^2=\mu \epsilon w^2 + i \mu \sigma w, \qquad k \in \mathbb{C}, \quad \mu, \epsilon, \sigma \in \mathbb{R},
+\end{equation}
+Quitando las dependencia de la frecuencia $w$ 
+\begin{subequations}
+	\begin{eqnarray}
+	(k+i\kappa)^2 &=& k^2-\kappa^2+2ik\kappa=\mu\epsilon w^2+i\mu\sigma w \nonumber \\
+	k^2 - \kappa^2 &=& \mu \epsilon w^2, \\ 
+	2 k \kappa &=& \mu \sigma w \nonumber, \\
+	\end{eqnarray}
+\end{subequations}
+por lo que 
+\begin{eqnarray}
+\kappa &=& \frac{\mu \epsilon w}{2 k},
+\end{eqnarray}
+
+
+Metiendo las equivalencias obtenidas a las ecuaciones originales 
+\begin{subequations}
+	\begin{eqnarray}
+	k^4 - \frac{\mu^2 \sigma^2 w^2}{4} - \mu \epsilon w^2=0 \nonumber,\\
+	\end{eqnarray}
+\end{subequations}
+Completando cuadrados llegamos a 
+\begin{subequations}
+	\begin{eqnarray}
+	k= w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1+\left(\frac{\sigma}{\epsilon w} \right)^2}+1 \right]^\frac{1}{2},
+	\end{eqnarray}
+\end{subequations}
+como $\kappa^2 = k^2 - \mu \epsilon w^2$ luego
+\begin{subequations}
+	\begin{eqnarray}
+	\kappa = w \sqrt{\frac{\epsilon \mu}{2}} \left[\sqrt{1 + \left(\frac{\sigma}{\epsilon w} \right)^2}-1\right]^\frac{1}{2},
+	\end{eqnarray}
+\end{subequations}

@@ -1,5 +1,4 @@
 \select@language {spanish}
-\select@language {spanish}
 \contentsline {chapter}{\ Abstract}{\es@scroman {iii}}{chapter*.1}
 \contentsline {chapter}{\ Resumen}{\es@scroman {v}}{chapter*.2}
 \contentsline {chapter}{\ Agradecimientos}{\es@scroman {vii}}{chapter*.3}
@@ -7,13 +6,15 @@
 \contentsline {chapter}{\ Introduction}{1}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Sobre gu\IeC {\'\i }as de ondas}{3}{chapter.1}
 \contentsline {subsection}{\numberline {1.0.1}Ecuaciones de Helmholtz}{3}{subsection.1.0.1}
-\contentsline {subsection}{\numberline {1.0.2}Guias met\IeC {\'a}lica}{4}{subsection.1.0.2}
+\contentsline {subsection}{\numberline {1.0.2}Gu\IeC {\'\i }as diel\IeC {\'e}ctricas con frontera met\IeC {\'a}lica}{4}{subsection.1.0.2}
 \contentsline {subsubsection}{Gu\IeC {\'\i }as cuadradas}{5}{section*.7}
-\contentsline {subsubsection}{Gu\IeC {\'\i }as esf\IeC {\'e}ricas}{6}{section*.8}
-\contentsline {subsection}{\numberline {1.0.3}Gu\IeC {\'\i }as diel\IeC {\'e}ctricas}{7}{subsection.1.0.3}
+\contentsline {subsubsection}{Gu\IeC {\'\i }as esf\IeC {\'e}ricas}{5}{section*.8}
+\contentsline {subsection}{\numberline {1.0.3}Gu\IeC {\'\i }as diel\IeC {\'e}ctricas}{6}{subsection.1.0.3}
 \contentsline {subsubsection}{Gu\IeC {\'\i }as cuadradas}{8}{section*.9}
 \contentsline {subsubsection}{Gu\IeC {\'\i }as esf\IeC {\'e}ricas}{9}{section*.10}
 \contentsline {subsection}{\numberline {1.0.4}Acoplamientos}{9}{subsection.1.0.4}
+\contentsline {subsection}{\numberline {1.0.5}Separaci\IeC {\'o}n de constante de propagaci\IeC {\'o}n}{9}{subsection.1.0.5}
 \contentsline {chapter}{\numberline {2}}{11}{chapter.2}
 \contentsline {chapter}{\numberline {3}}{13}{chapter.3}
 \contentsline {chapter}{\numberline {4}}{15}{chapter.4}
+\contentsline {chapter}{\numberline {A}Simulaci\'on cu\'antica con iones atrapados}{17}{appendix.Alph1}

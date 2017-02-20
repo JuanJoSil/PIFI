@@ -8,4 +8,6 @@ A level-1 auxiliary file: Chapter4.aux
 A level-1 auxiliary file: Chapter5.aux
 A level-1 auxiliary file: Appendix1.aux
 The style file: ieeetr.bst
-Database file #1: references.bib
+Database file #1: JuanJoref.bib
+Warning--can't use both author and editor fields in GriffithsElec
+(There was 1 warning)

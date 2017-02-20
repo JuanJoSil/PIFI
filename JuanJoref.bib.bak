@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Book{GriffithsElec,
+  title     = {Introduction to Electrodynamics},
+  publisher = {Pearson},
+  year      = {2012},
+  author    = {David J. Griffiths},
+  editor    = {Alison Reeves},
+}
+
+@Book{,
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
